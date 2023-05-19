@@ -69,12 +69,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  function handleTouchMove(e) {
+    e = e || window.event;
+    var delta = e.touches[0].clientY - startY;
+    startY = e.touches[0].clientY;
+
+    if (delta > 0) {
+      if (div > 0) {
+        div--;
+      }
+    } else {
+      if (div < divs.length - 1) {
+        div++;
+      }
+    }
+
+    var scrollPosition = divs[div].offsetTop;
+    smoothScrollTo(document.documentElement, scrollPosition, 800);
+
+    e.preventDefault();
+  }
+
   function handleResize() {
     var scrollPosition = divs[div].offsetTop;
     window.scrollTo(0, scrollPosition);
   }
 
-  window.addEventListener('mousewheel', handleScroll);
-  window.addEventListener('DOMMouseScroll', handleScroll);
+  var startY = 0;
+  window.addEventListener('touchmove', handleTouchMove);
   window.addEventListener('resize', handleResize);
 });
