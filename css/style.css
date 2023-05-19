@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/Montserrat-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/Montserrat-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TT Travels Next';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/TT Travels Next Trial ExtraBold.woff') format('woff');
+}
+
+.plug-body {
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #000000;
+}
+
+.plug__container {
+  max-width: 1490px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.plug {
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.plug__inner {
+  display: flex;
+  flex-direction: column;
+  column-gap: 50px;
+  row-gap: 50px;
+}
+
+.plug__socials {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+  justify-content: flex-end;
+}
+
+.plug__social {}
+
+.plug__social-link {}
+
+.plug__social-img {}
+
+.plug__main {
+  display: flex;
+  justify-content: center;
+  column-gap: 130px;
+}
+
+.plug__logo {}
+
+.plug__logo-img {}
+
+.plug__logo-achor {
+  display: none;
+}
+
+.plug__logo-arrow {}
+
+.plug__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+.plug__texts {
+  max-width: 220px;
+}
+
+.plug__text {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.plug__text:not(:last-child) {
+  margin-bottom: 20px;
+
+}
+
+.plug__connection {}
+
+.plug__connection-label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.plug__connection-mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  min-height: 44px;
+  padding: 8px 20px;
+  margin-bottom: 20px;
+  background-color: #EF5154;
+  border-radius: 15px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.plug__connection-tel {
+  font-family: 'TT Travels Next';
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.plug__ticker {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-family: 'TT Travels Next';
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 85px;
+  color: #DCE1E3;
+}
