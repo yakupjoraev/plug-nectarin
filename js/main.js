@@ -19,7 +19,7 @@ if (/iPhone/.test(navigator.userAgent)) {
   // Если пользователь заходит через iPhone
   // Изменяем стили для элемента .plug__ticker
   var tickerElement = document.querySelector('.plug__ticker');
-  tickerElement.style.bottom = '220px';
+  tickerElement.style.bottom = '150px';
   tickerElement.style.fontSize = '24px';
   tickerElement.style.lineHeight = '28px';
 }

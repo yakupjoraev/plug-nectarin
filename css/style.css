@@ -186,7 +186,7 @@ body {
     flex-direction: column-reverse;
     justify-content: space-between;
     row-gap: 20px;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
     padding-top: 0;
   }
 
