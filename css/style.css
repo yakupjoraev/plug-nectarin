@@ -143,9 +143,7 @@ body {
   color: #000000;
 }
 
-.plug__ticker-tel {
-  display: none;
-}
+
 
 .plug__ticker {
   position: absolute;
@@ -158,11 +156,17 @@ body {
   color: #DCE1E3;
   white-space: nowrap;
   overflow: hidden;
+
+  display: flex;
+  column-gap: 100px;
+  animation: marquee 140s linear infinite;
 }
 
-.plug__ticker span {
-  display: inline-block;
-  animation: marquee 140s linear infinite;
+.plug__ticker span {}
+
+.plug__ticker-tel {
+  display: none;
+  column-gap: 60px;
 }
 
 @media (max-width: 991px) {
@@ -240,6 +244,7 @@ body {
 
   .plug__ticker {
     bottom: 104px;
+    column-gap: 60px;
     font-size: 28px;
     line-height: 39px;
   }
