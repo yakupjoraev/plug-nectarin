@@ -22,9 +22,11 @@
   src: url('../fonts/TT Travels Next Trial ExtraBold.woff') format('woff');
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  overscroll-behavior: none;
 }
+
 
 .plug-body {
   min-height: 100vh;
@@ -154,13 +156,13 @@ html {
   font-size: 60px;
   line-height: 85px;
   color: #DCE1E3;
-
   white-space: nowrap;
-  animation: marquee 10s linear infinite;
+  overflow: hidden;
 }
 
 .plug__ticker span {
-  margin-right: 20px;
+  display: inline-block;
+  animation: marquee 140s linear infinite;
 }
 
 @media (max-width: 991px) {
@@ -346,17 +348,15 @@ html {
   }
 }
 
-
 @keyframes marquee {
   0% {
-    left: 0;
+    transform: translateX(0);
   }
 
   100% {
-    left: -100%;
+    transform: translateX(-100%);
   }
 }
-
 
 @keyframes arrow {
   0% {
