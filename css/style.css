@@ -157,21 +157,22 @@ body {
   white-space: nowrap;
   overflow: hidden;
 
+
+  --gap: 5rem;
+  margin-block: 10px;
   display: flex;
-  column-gap: 100px;
-  animation: marquee 140s linear infinite;
+  gap: var(--gap);
+  overflow: hidden;
+  user-select: none;
+
 }
 
-.plug__ticker span {}
 
 .plug__ticker-tel {
   display: none;
   column-gap: 60px;
 }
 
-.plug__ticker--desktop {
-  display: none;
-}
 
 @media (max-width: 991px) {
   .plug__main {
@@ -258,6 +259,11 @@ body {
     width: 100%;
     touch-action: pan-y;
   }
+
+  .plug__ticker--desktop {
+    display: none;
+  }
+
 
 }
 
@@ -356,15 +362,6 @@ body {
   }
 }
 
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
-}
 
 @keyframes arrow {
   0% {
@@ -379,3 +376,31 @@ body {
     transform: translateY(-10px);
   }
 }
+
+
+
+.marquee {}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  /* min-width: 100%; */
+  gap: var(--gap);
+}
+
+.scroll {
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* styling design*/
